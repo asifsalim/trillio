@@ -1,0 +1,111 @@
+.hotel-view{
+    flex: 1;
+}
+
+.gallery-items{
+
+    display: flex;
+
+    &__box{
+
+        width: 100%;
+    // align-items: center;
+    // justify-content: center;
+
+
+
+    }
+
+    &__photo{
+        width: inherit;
+        display: block;
+
+    }
+}
+
+.banner{
+
+
+    display: flex;
+    border-bottom:1px solid var(--color-grey);
+    align-items: center;
+
+
+    &__header{
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 1.3rem 2.5rem;
+        color: var(--color-grey-dark);
+
+    }
+
+    &__stars{
+        margin-right: auto;
+        display: flex;
+    }
+    &__icon--stars,
+    &__icon--location{
+        height: 1.7rem;
+        width: 1.7rem;
+        fill: var(--color-primary);
+    }
+
+    &__location{
+
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+
+
+    }
+
+    &__icon--location{
+        margin-right: .5rem;
+    }
+
+    &__rating{
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        margin-left: 2rem;
+        padding: 1rem 2rem;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &--bigger{
+            font-size: 2.25rem;
+            font-weight: 300;
+        }
+
+        &--smaller{
+            font-size: .8rem;
+            text-transform: uppercase;
+        }
+    }
+
+
+
+
+}
+
+.inline-button{
+    border: none;
+    font-size:inherit;
+    background-color: transparent;
+    color: var(--color-primary);
+    border-bottom: 1px solid currentColor;
+    cursor: pointer;
+    padding-bottom: 2px;
+    display: inline-block;
+
+    &:hover{
+        color: var(--color-primary-dark);
+    }
+
+    &:focus{
+        outline: none;
+        animation: ZoomInOut 1s infinite;
+    }
+}

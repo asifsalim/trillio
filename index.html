@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="sass/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+  <title>trillo &mdash; Your all-in-one booking app</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <!-- logo code -->
+      <img src="img/logo.png" alt="trillio logo" class="logo">
+
+      <!-- search bar -->
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search Hotels">
+        <button class="search__button">
+          <svg class="search__icons">
+            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+
+      <!-- nav bar -->
+      <nav class="user-nav">
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span class="user-nav__notifications user-nav__notifications--1">7</span>
+        </div>
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-chat"></use>
+          </svg>
+          <span class="user-nav__notifications user-nav__notifications--2">13</span>
+        </div>
+
+        <div class="user-nav__user">
+          <img src="img/sj.jpg" alt="owner" class="user-nav__user--photo">
+          <span>Asif Salim</span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="content">
+      <nav class="sidebar">
+        <ul class="side-nav">
+          <li class="side-nav__items side-nav__items--active">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-home"></use>
+                <span>Hotels</span>
+              </svg>
+            </a>
+          </li>
+
+
+          <li class="side-nav__items">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                <span>Flights</span>
+              </svg>
+            </a>
+          </li>
+
+
+          <li class="side-nav__items">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-key"></use>
+                <span>Car Rentals</span>
+              </svg>
+            </a>
+          </li>
+
+
+          <li class="side-nav__items">
+            <a href="#" class="side-nav__link">
+              <svg class="side-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-map"></use>
+                <span>Tours</span>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="copyrights">
+          &copy; 2021 all rights are reserved by asif salim
+        </div>
+      </nav>
+      <main class="hotel-view">
+        <div class="gallery-items">
+          <figure class="gallery-items__box">
+            <img src="img/hotel-1.jpg" alt="" class="gallery-items__photo">
+          </figure>
+          <figure class="gallery-items__box">
+            <img src="img/hotel-2.jpg" alt="" class="gallery-items__photo">
+          </figure>
+          <figure class="gallery-items__box">
+            <img src="img/hotel-3.jpg" alt="" class="gallery-items__photo">
+          </figure>
+        </div>
+        <div class="banner">
+          <h1 class="banner__header">Hotel Las Palmas</h1>
+          <div class="banner__stars">
+            <svg class="banner__icon--stars">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="banner__icon--stars">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="banner__icon--stars">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="banner__icon--stars">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="banner__icon--stars">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+          <div class="banner__location">
+            <svg class="banner__icon--location">
+              <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+            </svg>
+            <button class="inline-button">Saidpur,Bangladesh</button>
+          </div>
+          <div class="banner__rating">
+            <div class="banner__rating--bigger">8.7</div>
+            <div class="banner__rating--smaller">429 votes</div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="description">
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa ad minus inventore praesentium! Quod vel modi quaerat inventore praesentium.
+              Esse ipsa ad minus inventore praesentium! Quod vel modi quaerat inventore praesentium.Esse ipsa ad minus inventore praesentium! Quod vel modi quaerat inventore praesentium.
+            </p>
+            <p class="paragraph margin-bottom">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa ad minus inventore praesentium!
+            </p>
+            <ul class="list margin-bottom">
+              <li class="list__items">Close to the beach</li>
+              <li class="list__items">Free airport shuttle</li>
+              <li class="list__items">Air conditioning and heating</li>
+              <li class="list__items">We speak all languages</li>
+              <li class="list__items">Breakfast included</li>
+              <li class="list__items">Free wifi in all rooms</li>
+              <li class="list__items">Pets allowed</li>
+              <li class="list__items">Perfect for families</li>
+            </ul>
+            <div class="recommend">
+              <div class="recommend__count">
+                <p>Lucy and 3 others like the hotels</p>
+              </div>
+              <div class="recommend__friends">
+                <img src="img/user-3.jpg" alt="friend-1" class="recommend__photo">
+                <img src="img/user-4.jpg" alt="friend-1" class="recommend__photo">
+                <img src="img/user-5.jpg" alt="friend-1" class="recommend__photo">
+                <img src="img/user-6.jpg" alt="friend-1" class="recommend__photo">
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            review
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>
