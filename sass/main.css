@@ -9,8 +9,8 @@
   --color-grey-light-2:#F8F9FA;
   --color-dark-black:#242423;
   --color-white:#ffffff;
-  --color-shadow: 0 2rem 3rem rgba(0,0,0,0.3);
-  --color-shadow-light: 0 3rem 5rem rgba(0,0,0,0.6);
+  --color-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+  --color-shadow-light: 0 3rem 5rem rgba(0,0,0,0.06);
   --line: 1px solid var(--color-grey-dark-1);
   --color-notification:#fd0557;
 }
@@ -31,7 +31,7 @@
 }
 
 .paragraph {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--color-grey-dark);
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -39,6 +39,17 @@
 
 .margin-bottom {
   border-bottom: var(--line);
+}
+
+.Bold-Name {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.Date {
+  color: var(--color-grey);
+  font-size: 1.3rem;
+  line-height: 1.7;
 }
 
 * {
@@ -88,6 +99,7 @@ body {
   color: var(--color-grey);
   text-transform: capitalize;
   padding: 2rem;
+  text-align: center;
 }
 
 .side-nav {
@@ -219,20 +231,87 @@ body {
 
 .inline-button {
   border: none;
-  font-size: inherit;
+  font-size: 1.3rem;
   background-color: transparent;
   color: var(--color-primary);
   border-bottom: 1px solid currentColor;
   cursor: pointer;
   padding-bottom: 2px;
   display: inline-block;
+  font-weight: 700;
+}
+
+.inline-button span {
+  margin-left: 2px;
+  transition: margin-left .2s;
 }
 
 .inline-button:hover {
   color: var(--color-primary-dark);
 }
 
+.inline-button:hover span {
+  margin-left: 5px;
+}
+
 .inline-button:focus {
+  outline: none;
+  animation: ZoomInOut 1s infinite;
+}
+
+.cta {
+  padding: 5rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-grey-dark);
+}
+
+.cta__text {
+  margin-bottom: 3rem;
+}
+
+.btn {
+  border: none;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  border-radius: 100px;
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all .2s;
+}
+
+.btn__visible {
+  padding: 2rem 7.5rem;
+}
+
+.btn__invisible {
+  padding: 2rem 0;
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+}
+
+.btn:hover .btn__visible {
+  transform: translateY(100%);
+}
+
+.btn:hover .btn__invisible {
+  top: 0;
+}
+
+.btn:focus {
   outline: none;
   animation: ZoomInOut 1s infinite;
 }
@@ -248,8 +327,8 @@ body {
   flex: 0 0 60%;
   margin-right: 3.5rem;
   padding: 3rem;
-  border-bottom: --line;
-  box-shadow: --color-shadow-light;
+  border-bottom: var(--line);
+  box-shadow: var(--color-shadow-light);
 }
 
 .list {
@@ -260,7 +339,7 @@ body {
 
 .list__items {
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--color-grey-dark);
   flex: 0 0 50%;
   padding: 1rem;
@@ -307,8 +386,67 @@ body {
 }
 
 .review {
-  background-color: lemonchiffon;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-box {
+  padding: 3rem;
+  margin-bottom: 2rem;
+  background-color: var(--color-white);
+  box-shadow: var(--color-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.review-box__comments {
+  font-size: 1.4rem;
+  color: var(--color-grey-dark);
+  padding-bottom: 2rem;
+  z-index: 10;
+  position: relative;
+}
+
+.review-box__users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-box__users--photo {
+  display: flex;
+  align-items: center;
+}
+
+.review-box__users--photo--1 {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.review-box__users--details {
+  margin-left: 1rem;
+}
+
+.review-box__users--rating {
+  font-size: 2rem;
+  display: inline-block;
+  color: var(--color-primary);
+  margin-top: -1rem;
+}
+
+.review-box::before {
+  content: "\201C";
+  font-size: 20rem;
+  color: var(--color-grey-light);
+  line-height: 1;
+  position: absolute;
+  top: -2.75rem;
+  left: -.75rem;
+  font-family: sans-serif;
+  z-index: 1;
 }
 
 .logo {

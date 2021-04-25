@@ -1,3 +1,14 @@
 .margin-bottom{
     border-bottom: var(--line);
 }
+
+.Bold-Name{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.Date{
+    color: var(--color-grey);
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
